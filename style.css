@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background: url("https://wallpaperaccess.com/full/11740.jpg") no-repeat center center/cover;
+}
+
+.form-box {
+  position: relative;
+  width: 350px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 2em;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.inputbox {
+  position: relative;
+  margin: 30px 0;
+  width: 100%;
+  border-bottom: 2px solid #fff;
+}
+
+.inputbox label {
+  position: absolute;
+  top: 30%;
+  left: 5px;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 1em;
+  pointer-events: none;
+  transition: 0.5s ease-in-out;
+}
+
+.inputbox input,
+.inputbox textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  padding: 0 35px 0 5px;
+  color: #fff;
+  transition: padding 0.5s ease-in-out;
+}
+
+.inputbox input:focus ~ label,
+.inputbox input:valid ~ label,
+.inputbox textarea:focus ~ label,
+.inputbox textarea:valid ~ label {
+  top: -15px;
+  font-size: 1em;
+}
+
+.inputbox input:focus,
+.inputbox textarea:focus {
+  padding: 0 35px 5px 5px;
+}
+
+.inputbox input:focus ~ label,
+.inputbox input:valid ~ label {
+  top: -5px;
+  color: rgb(255, 255, 255);
+}
+
+.inputbox i {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 18px;
+  transition: 0.5s;
+}
+
+.rate{
+  font-weight: bolder;
+}
+.inputbox input:focus ~ i,
+.inputbox input:valid ~ i {
+  color: rgb(0, 169, 254);
+}
+.inputbox ion-icon {
+  position: absolute;
+  right: 10px;
+  color: #fff;
+  font-size: 1.2em;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.inputbox input:focus ~ ion-icon,
+.inputbox input:valid ~ ion-icon,
+.inputbox textarea:focus ~ ion-icon,
+.inputbox textarea:valid ~ ion-icon {
+  top: -25px;
+  transform: translateY(-50%);
+}
+
+textarea {
+  height: 80px;
+  resize: vertical;
+  padding: 10px 35px 10px 5px;
+}
+
+/* From Uiverse.io by MuhammadHasann */
+button {
+  position: relative;
+  padding: 12px 35px;
+  background: #fec195;
+  font-size: 17px;
+  font-weight: 500;
+  color: #181818;
+  border: 3px solid #fec195;
+  border-radius: 8px;
+  box-shadow: 0 0 0 #fec1958c;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.star-1 {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.star-2 {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-3 {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-4 {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-5 {
+  position: absolute;
+  top: 25%;
+  left: 45%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 0.6s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-6 {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 0.8s ease;
+}
+
+button:hover {
+  background: transparent;
+  color: #fec195;
+  box-shadow: 0 0 25px #fec1958c;
+}
+
+button:hover .star-1 {
+  position: absolute;
+  top: -80%;
+  left: -30%;
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-2 {
+  position: absolute;
+  top: -25%;
+  left: 10%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-3 {
+  position: absolute;
+  top: 55%;
+  left: 25%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-4 {
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-5 {
+  position: absolute;
+  top: 25%;
+  left: 115%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-6 {
+  position: absolute;
+  top: 5%;
+  left: 60%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.fil0 {
+  fill: #fffdef;
+}
+
+/* Emoji Rating Section */
+.emoji-rating {
+  margin-top: 15px;
+  text-align: center;
+  color: #fff;
+}
+
+.emoji {
+  display: flex;
+  justify-content: space-around; /* Align emojis with space around */
+  margin-top: 10px;
+  padding: 10px 0; /* Space around emojis */
+  background: rgba(255, 255, 255, 0); /* Transparent background */
+  border-radius: 20px;
+}
+
+.emoji input {
+  display: none; /* Hide radio buttons */
+}
+
+.emoji-label {
+  font-size: 3em; /* Increased emoji size */
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation */
+  position: relative; /* For positioning tooltip */
+}
+
+.emoji-label:hover {
+  transform: scale(1.2); /* Scale up on hover */
+}
+
+.emoji input:checked + .emoji-label {
+  transform: scale(1.5) rotate(10deg); /* Scale and rotate on select */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Add shadow */
+}
+
+/* Tooltip Styles */
+.tooltip {
+  position: absolute;
+  bottom: 120%; /* Position tooltip above the emoji */
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  padding: 0.3em 0.6em;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: #fff;
+  border-radius: 0.5rem;
+  z-index: 99999;
+  font-size: 1em;
+}
+
+.emoji-label:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) scale(1);
+}
